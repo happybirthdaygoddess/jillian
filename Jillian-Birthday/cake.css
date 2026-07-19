@@ -1,0 +1,369 @@
+/* ==========================
+   Birthday Cake Decorator
+   cake.css
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Fredoka',sans-serif;
+    background:linear-gradient(135deg,#ffe4ef,#ffd6ec,#fff5fb);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+}
+
+h1{
+    text-align:center;
+    color:#ff4d88;
+    margin-bottom:10px;
+    font-size:3rem;
+}
+
+.subtitle{
+    text-align:center;
+    color:#777;
+    margin-bottom:30px;
+    font-size:1.1rem;
+}
+
+.game{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+    justify-content:center;
+}
+
+/* ===================
+   Toolbar
+=================== */
+
+.toolbar{
+    width:260px;
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.toolbar h2{
+    text-align:center;
+    color:#ff4d88;
+    margin-bottom:15px;
+}
+
+.tool{
+    width:100%;
+    padding:12px;
+    margin-bottom:10px;
+    border:none;
+    border-radius:12px;
+    background:#ffe8f3;
+    cursor:pointer;
+    transition:.25s;
+    font-size:16px;
+}
+
+.tool:hover{
+    transform:translateY(-2px);
+    background:#ffd4e8;
+}
+
+hr{
+    margin:18px 0;
+    border:none;
+    border-top:2px solid #eee;
+}
+
+
+.toolbar button{
+    width:100%;
+}
+
+/* ===================
+   Cake
+=================== */
+
+.cake-area{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#cake{
+    position:relative;
+    width:420px;
+    height:420px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.cake-layer{
+    width:260px;
+    border-radius:20px;
+    position:relative;
+    box-shadow:0 5px 10px rgba(0,0,0,.15);
+}
+
+.top{
+    width:140px;
+    height:70px;
+    background:#ffd2df;
+    z-index:3;
+}
+
+.middle{
+    width:200px;
+    height:90px;
+    background:#ffbfd3;
+    margin-top:-8px;
+    z-index:2;
+}
+
+.bottom{
+    width:280px;
+    height:110px;
+    background:#ffacc8;
+    margin-top:-8px;
+    z-index:1;
+}
+
+#decorations{
+    position:absolute;
+    inset:0;
+    z-index:20;
+}
+
+.decoration{
+    position:absolute;
+    font-size:30px;
+    cursor:pointer;
+    user-select:none;
+    transition:.15s;
+}
+
+.decoration:hover{
+    transform:scale(1.15);
+}
+
+/* ===================
+   Tip
+=================== */
+
+.tip{
+    margin-top:20px;
+    color:#666;
+}
+
+/* ===================
+   Popup
+=================== */
+
+#popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.popup-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    width:340px;
+    animation:pop .3s ease;
+}
+
+.popup-card h2{
+    color:#ff4d88;
+    margin-bottom:15px;
+}
+
+.popup-card p{
+    color:#555;
+    margin-bottom:20px;
+}
+
+.popup-card button{
+    border:none;
+    background:#ff4d88;
+    color:white;
+    padding:12px 22px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* ===================
+   Mobile
+=================== */
+
+@media(max-width:900px){
+
+.game{
+    flex-direction:column;
+    align-items:center;
+}
+
+.toolbar{
+    width:100%;
+    max-width:400px;
+}
+
+#cake{
+    width:320px;
+    height:320px;
+}
+
+.bottom{
+    width:220px;
+}
+
+.middle{
+    width:170px;
+}
+
+.top{
+    width:120px;
+}
+
+.decoration{
+    font-size:24px;
+}
+
+h1{
+    font-size:2.2rem;
+}
+
+}#homeBtn{
+
+    background:#89c8ff;
+
+    color:white;
+
+    margin-top:12px;
+
+}
+
+#homeBtn:hover{
+
+    background:#6db7f8;
+
+}
+/* ==========================
+   Action Buttons
+========================== */
+
+.action-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-top:20px;
+
+}
+
+.action-btn{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-family:'Fredoka',sans-serif;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+    color:#ff4d88;
+
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.95),
+        rgba(255,240,247,.95)
+    );
+
+    border:2px solid rgba(255,255,255,.9);
+
+    box-shadow:
+        0 8px 20px rgba(255,170,205,.18),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    transition:
+        transform .25s,
+        box-shadow .25s,
+        background .25s;
+
+}
+
+.action-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+        180deg,
+        white,
+        #fff5fa
+    );
+
+    box-shadow:
+        0 15px 30px rgba(255,170,205,.28);
+
+}
+
+.action-btn:active{
+
+    transform:scale(.98);
+
+}
+.action-buttons .action-btn{
+
+    border-radius:20px !important;
+
+    overflow:hidden;
+
+}
