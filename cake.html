@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>🎂 Decorate Jillian's Cake</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="cake.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎂 decorate mo cake m</h1>
+
+    <p class="subtitle">
+            wag k na magreklamo pls eme eme lang to, emoji lang cuz katamad mag download ng image ng topings 💖
+    </p>
+
+    <div class="game">
+
+        <!-- Toolbar -->
+
+        <div class="toolbar">
+
+            <h2>🎀 Decorations</h2>
+
+            <button class="tool" data-item="strawberry">
+                🍓 Strawberry
+            </button>
+
+            <button class="tool" data-item="flower">
+                🌸 Flower
+            </button>
+
+            <button class="tool" data-item="heart">
+                💖 Heart
+            </button>
+
+            <button class="tool" data-item="star">
+                ⭐ Star
+            </button>
+
+            <button class="tool" data-item="candle">
+                🕯️ Candle
+            </button>
+
+            <button class="tool" data-item="sprinkles">
+                ✨ Sprinkles
+            </button>
+
+            <button class="tool" data-item="chocolate">
+                🍫 Chocolate
+            </button>
+
+            <button class="tool" data-item="blueberry">
+                🫐 Blueberry
+            </button>
+
+            <hr>
+
+            <div class="action-buttons">
+
+                <button id="clearBtn" class="action-btn">
+                    🗑️ Clear Cake
+                </button>
+
+                <button id="confettiBtn" class="action-btn">
+                    🎉 Celebrate
+                </button>
+
+                <button id="saveBtn" class="action-btn">
+                    📸 Save
+                </button>
+
+                <button id="homeBtn" class="action-btn">
+                    🏠 Back Home
+                </button>
+
+            </div>
+
+        </div>
+
+                <!-- Cake Area -->
+
+        <div class="cake-area">
+
+            <div id="cake">
+
+                <div id="decorations"></div>
+
+                <div class="cake-layer top"></div>
+
+                <div class="cake-layer middle"></div>
+
+                <div class="cake-layer bottom"></div>
+
+            </div>
+
+            <p class="tip">
+                💡pili ka lang ng decoration kineme, then click kahit san sa cake to place it.
+                drag mo sila to move them, double-click naman to erase.💡
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Celebration Popup -->
+
+<div id="popup" class="hidden">
+
+    <div class="popup-card">
+
+        <h2>
+            🎉 Happy Birthday Jillian! 🎂
+        </h2>
+
+        <p>
+            Wow lopit. 💖
+        </p>
+
+        <button id="closePopup">
+            ❤️ Close
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="cake.js"></script>
+
+</body>
+</html>

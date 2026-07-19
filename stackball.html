@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Stack Ball - Jillian Birthday</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Quicksand:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="stackball.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="gradient-bg"></div>
+
+    <div class="blur-circle blur1"></div>
+    <div class="blur-circle blur2"></div>
+    <div class="blur-circle blur3"></div>
+
+    <!-- Top UI -->
+
+    <div class="top-ui">
+
+        <button
+            class="back-btn"
+            onclick="window.location.href='index.html'">
+            ⬅ Back
+        </button>
+
+        <div class="score-box">
+
+            <div class="score-title">
+                Score
+            </div>
+
+            <div id="score">
+                0
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Game -->
+
+    <main class="game-wrapper">
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="instruction">
+
+            Hold mouse button or touch screen<br>
+            to smash through the tower!
+
+        </div>
+
+    </main>
+
+    <!-- Game Over -->
+
+    <div id="gameOver" class="popup hidden">
+
+        <div class="popup-card">
+
+            <h2>
+                💥 Game Over
+            </h2>
+
+            <p>
+                You hit a black platform!
+            </p>
+
+            <button id="restartBtn">
+                Try Again
+            </button>
+
+            <button onclick="window.location.href='index.html'">
+                Back Home
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Win -->
+
+    <div id="winScreen" class="popup hidden">
+
+        <div class="popup-card">
+
+            <h2>
+                🎉 Congratulations!
+            </h2>
+
+            <p>
+
+                Jillian reached the cake!!
+
+            </p>
+
+            <h3>
+
+                Final Score:
+                <span id="finalScore">0</span>
+
+            </h3>
+
+            <button id="playAgainBtn">
+                Play Again
+            </button>
+
+            <button onclick="window.location.href='index.html'">
+                Back Home
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Audio -->
+
+    <audio id="breakSound">
+        <source src="music/break.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="loseSound">
+        <source src="music/lose.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="winSound">
+        <source src="music/win.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JS -->
+
+    <script src="stackball.js"></script>
+
+</body>
+
+</html>
